@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Primera App Workshop</string>
+    <string name="txt_act1_nombre">Ingrese nombre</string>
+    <string name="txt_act1_botton">IR!</string>
+    <string name="txt_act1_foto">Tomar Foto!</string>
+    <string name="txt_act2_respuesta">Ingrese respuesta</string>
+    <string name="txt_act2_accept">Aceptar</string>
+    <string name="txt_act2_cancel">Cancelar</string>
+
+</resources>

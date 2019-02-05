@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">First App Workshop</string>
+    <string name="txt_act1_nombre">input name</string>
+    <string name="txt_act1_botton">Go!</string>
+    <string name="txt_act1_foto">Take a Phooto!</string>
+    <string name="txt_act2_respuesta">Input response</string>
+    <string name="txt_act2_accept">Accept</string>
+    <string name="txt_act2_cancel">Cancel</string>
+
+</resources>
