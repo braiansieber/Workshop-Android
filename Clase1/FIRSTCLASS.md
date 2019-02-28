@@ -11,7 +11,9 @@
 - Adicional: Agreguen un segundo botón en la primer activity que abra la cámara con otro request code y muestre como resultado un diálogo (investigar como se hace el diálogo) diciendo si el usuario tomó la foto con éxito o si canceló la captura.
 
   Bibliografía:
-  - [Manifest](https://developer.android.com/guide/topics/manifest/manifest-intro).
-  - [Activities](https://developer.android.com/guide/components/activities).
-  - [Activity Lifecycle](https://developer.android.com/guide/components/activities/activity-lifecycle).
-  - [Intents](https://developer.android.com/guide/components/intents-filters).
+  - [Manifest](https://developer.android.com/guide/topics/manifest/manifest-intro)
+  - [Activities](https://developer.android.com/guide/components/activities)
+  - [Activity Lifecycle](https://developer.android.com/guide/components/activities/activity-lifecycle)
+  - [Intents](https://developer.android.com/guide/components/intents-filters)
+
+![Diagram first class](https://github.com/braiansieber/Workshop-Android/tree/master/Images/firstclass-diagram.png)

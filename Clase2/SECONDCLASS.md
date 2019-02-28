@@ -10,5 +10,7 @@
 - En la segunda pantalla se debe usar relative layout y cada cuadrito de color debe ser un frame layout con tamaño de 20dp cuadrado.
 
   Bibliografía:
-  - [Views, Layouts y ViewGroups](https://developer.android.com/guide/topics/ui/declaring-layout?hl=es-419).  
-  - [Recycler View](https://developer.android.com/guide/topics/ui/layout/recyclerview).
+  - [Views, Layouts y ViewGroups](https://developer.android.com/guide/topics/ui/declaring-layout?hl=es-419)
+  - [Recycler View](https://developer.android.com/guide/topics/ui/layout/recyclerview)
+
+![Diagram second class](https://github.com/braiansieber/Workshop-Android/tree/master/Images/secondclass-diagram.png)
