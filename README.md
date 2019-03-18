@@ -1,7 +1,7 @@
-# Workshop of Android dictated by @marcelobusico
+# Workshop of Android dictated by Marcelo busico (@marcelobusico)
 
-### [First Class](Clase1/FIRSTCLASS.md).
+### [First Class](Clase1/FIRSTCLASS.md)
 
-### [Second Class](Clase2/SECONDCLASS.md).
+### [Second Class](Clase2/SECONDCLASS.md)
 
-### [Third Class](Clase3/THIRDCLASS.md).
+### [Third Class](Clase3/THIRDCLASS.md)
