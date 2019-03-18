@@ -1,4 +1,4 @@
-# Workshop of Android dictated by **Marcelo Busico
+# Workshop of Android dictated by *Marcelo Busico*
 
 ### [First Class](Clase1/FIRSTCLASS.md).
 
