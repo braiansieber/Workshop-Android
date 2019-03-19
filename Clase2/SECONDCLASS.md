@@ -13,4 +13,6 @@
   - [Views, Layouts y ViewGroups](https://developer.android.com/guide/topics/ui/declaring-layout?hl=es-419)
   - [Recycler View](https://developer.android.com/guide/topics/ui/layout/recyclerview)
 
-![Diagram second class](https://github.com/braiansieber/Workshop-Android/tree/master/Images/secondclass-diagram.png)
+
+
+![Diagram second class](https://github.com/braiansieber/Workshop-Android/blob/master/Images/secondclass-diagram.png)
