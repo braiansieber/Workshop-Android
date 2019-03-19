@@ -16,4 +16,4 @@
   - [Activity Lifecycle](https://developer.android.com/guide/components/activities/activity-lifecycle)
   - [Intents](https://developer.android.com/guide/components/intents-filters)
 
-![Diagram first class](https://github.com/braiansieber/Workshop-Android/tree/master/Images/firstclass-diagram.png)
+![Diagram first class](https://github.com/braiansieber/Workshop-Android/blob/master/Images/firstclass-diagram.png)
