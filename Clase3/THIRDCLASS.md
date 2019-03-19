@@ -26,6 +26,6 @@
 
 #### Pantalla principal
 
-![Reddits List](https://github.com/braiansieber/Workshop-Android/tree/master/Images/RedditsList.png)
+![Reddits List](https://github.com/braiansieber/Workshop-Android/blob/master/Images/RedditsList.png)
 
-![Reddit Details Screen](https://github.com/braiansieber/Workshop-Android/tree/master/Images/RedditDetails.png)
+![Reddit Details Screen](https://github.com/braiansieber/Workshop-Android/blob/master/Images/RedditDetails.png)
