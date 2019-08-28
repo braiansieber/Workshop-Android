@@ -1,0 +1,69 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - python --version
+      - python -m venv venv
+      - . venv/bin/activate
+      - pip install pynamodb
+      - pip install requests
+      - pip install requests-toolbelt
+      - python -m venv venv2
+      - . venv2/bin/activate
+      - pip install pynamodb
+      - python -m venv venv3
+      - . venv3/bin/activate
+      - pip install pynamodb
+      - pip install redis
+  build:
+    commands:
+      - echo CODEBUILD_SOURCE_VERSION
+      - echo $CODEBUILD_SOURCE_VERSION
+      - for d in lambdas/*/ ; do cp lambdas/Models.py $d; done
+      - for d in lambdas/*/ ; do cp lambdas/Utils.py $d; done
+      - mv lambdas/Config_Admin.py lambdas/Config.py
+      - for d in lambdas/*/ ; do cp lambdas/Config.py $d; done
+      - cp -r venv3/lib/python3.7/site-packages/* lambdas/createUser/
+      - cp -r venv2/lib/python3.7/site-packages/* lambdas/listUsers/
+      - cp -r venv2/lib/python3.7/site-packages/* lambdas/sendEmail/
+      - cp -r venv3/lib/python3.7/site-packages/* lambdas/getJob/
+      - cp -r venv2/lib/python3.7/site-packages/* lambdas/jobList/
+      - cp -r venv2/lib/python3.7/site-packages/* lambdas/resetUserQuota/
+      - cp -r venv3/lib/python3.7/site-packages/* lambdas/setUserBudget/
+      - cp -r venv2/lib/python3.7/site-packages/* lambdas/getUserBudget/
+      - cp -r venv2/lib/python3.7/site-packages/* lambdas/disableUser/
+      - cp -r venv/lib/python3.7/site-packages/* lambdas/jobSubmitAdmin/ 
+      - cp -r venv3/lib/python3.7/site-packages/* lambdas/cancelJob/ 
+      - cp -r venv2/lib/python3.7/site-packages/* lambdas/enableUser/
+      - cp -r venv2/lib/python3.7/site-packages/* lambdas/deleteUser/
+      - cp -r venv2/lib/python3.7/site-packages/* lambdas/isAdmin/
+      - cp -r venv2/lib/python3.7/site-packages/* lambdas/cognitoCustomMessage/
+      - cp -r venv2/lib/python3.7/site-packages/* lambdas/getS3Credentials/
+      - cp -r venv3/lib/python3.7/site-packages/* lambdas/amazonMachineImage/
+      - cp -r venv3/lib/python3.7/site-packages/* lambdas/catalogModules/
+      - cp -r venv3/lib/python3.7/site-packages/* lambdas/quotaNotification/
+      - cp -r venv3/lib/python3.7/site-packages/* lambdas/getJobLog/
+      - cp -r venv3/lib/python3.7/site-packages/* lambdas/updateDB/
+      - cp -r venv2/lib/python3.7/site-packages/* lambdas/userInfo/
+      - cp -r venv2/lib/python3.7/site-packages/* lambdas/resetPasswd/
+      - cp -r venv2/lib/python3.7/site-packages/* lambdas/resendInvitation/
+      - cp -r venv3/lib/python3.7/site-packages/* lambdas/userListFiles/
+      - cp -r venv3/lib/python3.7/site-packages/* lambdas/scanS3Directory/
+      - cp -r venv3/lib/python3.7/site-packages/* lambdas/s3Link/
+      - cp -r venv3/lib/python3.7/site-packages/* lambdas/updateUserQuota/
+      - aws cloudformation package --template-file deploy-fair-FB_admin.yaml --s3-bucket $BUCKET_PIPELINE --output-template-file outputCD-FB_admin.yaml
+      - printf '[{"name":"LinuxArtifactContainer","imageUri":"767796405127.dkr.ecr.us-east-1.amazonaws.com/fair_linux:latest"}]' > sn-linux-image-definitions.json
+      - printf '[{"name":"WindowsArtifactContainer","imageUri":"767796405127.dkr.ecr.us-east-1.amazonaws.com/fair_windows:latest"}]' > sn-windows-image-definitions.json
+      - printf '[{"name":"LinuxArtifactContainer","imageUri":"562184692901.dkr.ecr.us-east-1.amazonaws.com/fair_linux:latest"}]' > fb-linux-image-definitions.json
+      - printf '[{"name":"WindowsArtifactContainer ","imageUri":"562184692901.dkr.ecr.us-east-1.amazonaws.com/fair_windows:latest"}]' > fb-windows-image-definitions.json
+artifacts:
+  type: zip
+  files:
+    - tag_version
+    - branch
+    - deploy-fair-FB_admin.yaml
+    - outputCD-FB_admin.yaml
+    - sn-linux-image-definitions.json
+    - sn-windows-image-definitions.json
+    - fb-linux-image-definitions.json
+    - fb-windows-image-definitions.json
