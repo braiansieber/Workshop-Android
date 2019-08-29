@@ -4,3 +4,7 @@ phases:
     commands:
       - printenv
       - set
+      - echo $CODEBUILD_WEBHOOK_TRIGGER
+      - echo $CODEBUILD_SOURCE_VERSION
+      - echo $CODEBUILD_WEBHOOK_ACTOR_ACCOUNT_ID
+      - echo $CODEBUILD_WEBHOOK_PREV_COMMIT
