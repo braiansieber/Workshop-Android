@@ -8,6 +8,7 @@ phases:
       - echo $CODEBUILD_SOURCE_VERSION
       - echo $CODEBUILD_WEBHOOK_ACTOR_ACCOUNT_ID
       - echo $CODEBUILD_WEBHOOK_PREV_COMMIT
-      - mv git .git
+      - ls -l
+      - pwd
       - git branch
       - git status
